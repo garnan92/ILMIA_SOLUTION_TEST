@@ -28,7 +28,7 @@ const App = ()=> {
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.error || "Something went wrong");
+                throw new Error(data.error);
             }
 
             setResult(data.sum);
@@ -46,7 +46,7 @@ const App = ()=> {
 
               <form onSubmit={handleCalculate} className="space-y-5">
                   <input
-                      type="number"
+                      type="text"
                       value={a}
                       onChange={(e) => setA(e.target.value)}
                       placeholder="Enter A"
@@ -54,7 +54,7 @@ const App = ()=> {
                   />
 
                   <input
-                      type="number"
+                      type="text"
                       value={b}
                       onChange={(e) => setB(e.target.value)}
                       placeholder="Enter B"
@@ -63,7 +63,7 @@ const App = ()=> {
 
                   <button
                       type="submit"
-                      className="h-12 w-full rounded-lg bg-blue-600 text-base font-semibold text-white transition hover:bg-blue-700 active:scale-[0.99]"
+                      className="h-12 w-full rounded-lg bg-blue-600 text-base font-semibold text-white transition hover:bg-blue-700"
                   >
                       Calculate
                   </button>
