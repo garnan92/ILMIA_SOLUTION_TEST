@@ -27,7 +27,7 @@ class OperationsController extends AbstractController
         return $this->json($data);
     }
 
-    #[Route('/sum', methods: ['POST'])]
+    #[Route('/api/sum', methods: ['POST'])]
     public function sum(Request $request): JsonResponse
     {
 

@@ -14,7 +14,7 @@ const App = ()=> {
         setError("");
 
         try {
-            const response = await fetch("http://127.0.0.1:8080/sum", {
+            const response = await fetch("http://127.0.0.1:8080/api/sum", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
