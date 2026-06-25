@@ -10,7 +10,7 @@
 ## Build Containers
 
 ```bash
-docker compose build --no-cache
+docker-compose build --no-cache
 ```
 
 ---
@@ -18,7 +18,7 @@ docker compose build --no-cache
 ## Run Project
 
 ```bash
-docker compose up -d
+docker-compose up -d
 ```
 
 ---
