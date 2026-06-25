@@ -7,8 +7,10 @@ services:
     container_name: symfony_backend
     volumes:
       - ./operation_data:/var/www/html
+      - backend_vendor:/var/www/html/vendor
     environment:
       APP_ENV: dev
+    command: sh -c "composer install --no-interaction --prefer-dist --optimize-autoloader && php-fpm"
 
   backend_nginx:
     image: nginx:alpine
@@ -38,3 +40,4 @@ services:
 
 volumes:
   frontend_node_modules:
+  backend_vendor:
